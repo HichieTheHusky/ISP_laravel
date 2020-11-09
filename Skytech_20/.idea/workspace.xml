@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d76c456b-c10d-42de-bfce-9a6fe50a9a8a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/ISP_laravel.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Pagalba/bilietoforma.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Pagalba/pagalbos.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Pagalba/bilietas.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Pagalba/paskirsti.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Pagalba/uzdaryti.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Pagalba/vertinti.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Pagalba/bilietoforma.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Pagalba/bilietoforma.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Pagalba/pagalbos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Pagalba/pagalbos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +167,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604946161476</updated>
-      <workItem from="1604946162534" duration="4649000" />
+      <workItem from="1604946162534" duration="5323000" />
     </task>
     <servers />
   </component>

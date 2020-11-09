@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Pagalbos sistema') }}</div>
+                    <div class="card-header">{{ __('Jusu bilietai') }}</div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -14,7 +14,11 @@
                             </div>
                         @endif
 
-                        {{ __('Teoretiniai duomenys') }}
+                        {{ __('Teoretiniai bilietas') }}
+                            <a class="btn btn-primary" href="{{ route('bilietas') }}">{{ __('ziureti') }}</a>
+                            <a class="btn btn-primary" href="{{ route('vertinti') }}">{{ __('Vertinti') }}</a>
+                            <a class="btn btn-primary" href="{{ route('uzdaryti') }}">{{ __('Uzdaryti') }}</a>
+                            <a class="btn btn-primary" href="{{ route('paskirsti') }}">{{ __('Paskirstyti') }}</a>
                     </div>
                 </div>
             </div>

@@ -25,3 +25,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::view('pagalbos', 'pagalbos')->name('pagalbos');
 Route::view('bilietoforma', 'bilietoforma')->name('bilietoforma');
+Route::view('bilietas', 'bilietas')->name('bilietas');
+Route::view('paskirsti', 'paskirsti')->name('paskirsti');
+Route::view('uzdaryti', 'uzdaryti')->name('uzdaryti');
+Route::view('vertinti', 'vertinti')->name('vertinti');

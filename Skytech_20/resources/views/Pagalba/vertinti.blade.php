@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Bilietas') }}</div>
+                    <div class="card-header">{{ __('Vertinimo forma') }}</div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -14,8 +14,8 @@
                             </div>
                         @endif
 
-                        {{ __('Bilieto informacija') }}
-                            <a class="btn btn-primary" href="{{ route('bilietas') }}">{{ __('uzpildziau') }}</a>
+                        {{ __('Vertinimo informacija') }}
+                        <a class="btn btn-primary" href="{{ route('pagalbos') }}">{{ __('uzpildziau') }}</a>
                     </div>
                 </div>
             </div>
