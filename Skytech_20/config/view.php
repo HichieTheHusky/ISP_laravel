@@ -16,6 +16,11 @@ return [
     'paths' => [
         resource_path('views'),
         resource_path('views/Pagalba'),
+        resource_path('views/Surinkimas'),
+        resource_path('views/Vartotojo'),
+        resource_path('views/Prekiuvaldymas'),
+        resource_path('views/Administravimas'),
+        resource_path('views/Uzsakymai'),
     ],
 
     /*

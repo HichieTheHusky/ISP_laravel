@@ -38,6 +38,46 @@
                             <a class="nav-link" href="{{ route('home') }}">{{ __('Pradžia') }}</a>
                         </li>
 
+
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ __('Prekes') }}
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="nav-link" href="{{ route('prekespridejimas') }}">{{ __('Prekės pridėjimas') }}</a>
+                                <a class="nav-link" href="{{ route('prekes') }}">{{ __('prekes') }}</a>
+                            </div>
+                        </li>
+
+
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ __('Administravimas') }}
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="nav-link" href="{{ route('darbuotojopridejimas') }}">{{ __('Darbuotojo pridėjimas') }}</a>
+                                <a class="nav-link" href="{{ route('darbuotojai') }}">{{ __('Darbuotojų  sarašas') }}</a>
+                            </div>
+                        </li>
+
+
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ __('Užsakymai') }}
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="nav-link" href="{{ route('uzsakymoataskaitos') }}">{{ __('Užsakymų ataskaita') }}</a>
+                                <a class="nav-link" href="{{ route('uzsakymusarasas') }}">{{ __('Darbuotoju Užsakymų sąrašas') }}</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('dalis') }}">{{ __('kompiuterio surinkimas') }}</a>
+                        </li>
+
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ __('Pagalba') }}
@@ -47,9 +87,11 @@
                                 <a class="nav-link" href="{{ route('pagalbos') }}">{{ __('Bilietai') }}</a>
                                 <a class="nav-link" href="{{ route('bilietoforma') }}">{{ __('Bilieto sukurimas') }}</a>
                             </div>
-
-
                         </li>
+
+
+
+
                     </ul>
 
 
@@ -75,6 +117,11 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                                    <a class="dropdown-item" href="{{ route('profilis') }}">{{ __('Profilis') }}</a>
+
+                                    <a class="dropdown-item" href="{{ route('isimintinosprekes') }}">{{ __('Isimintinos Prekės') }}</a>
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

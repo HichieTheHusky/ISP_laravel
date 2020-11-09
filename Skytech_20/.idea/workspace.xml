@@ -2,13 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d76c456b-c10d-42de-bfce-9a6fe50a9a8a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/Pagalba/bilietas.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Pagalba/paskirsti.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Pagalba/uzdaryti.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Pagalba/vertinti.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Administravimas/ataskaita.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Administravimas/darbuotojai.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Administravimas/darbuotojas.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Administravimas/darbuotojopridejimas.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Administravimas/darbuotojoredag.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/ataskaitoskriterij.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/komentarasred.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/preke.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/prekes.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/prekespridejimas.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/prekesredag.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/prekesvertinimas.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/uzsakymosudarymas.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Surinkimas/daliesduomenu.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Surinkimas/dalis.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Surinkimas/filtravimo.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Surinkimas/surinkimopasirinkimolangas.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Uzsakymai/nepatuzsakymusarasas.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Uzsakymai/uzsakymas.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Uzsakymai/uzsakymoataskaitos.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Uzsakymai/uzsakymusarasas.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Vartotojo/isimintinosprekes.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Vartotojo/profilis.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Vartotojo/profilisredagavimas.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Pagalba/bilietoforma.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Pagalba/bilietoforma.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Pagalba/pagalbos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Pagalba/pagalbos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,6 +168,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lukas\Documents\GitHub\ISP_laravel\Skytech_20\resources\views\Prekiuvaldymas" />
       <recent name="C:\Users\lukas\Documents\GitHub\ISP_laravel\Skytech_20\resources\views\Pagalba" />
       <recent name="C:\Users\lukas\Documents\GitHub\ISP_laravel\Skytech_20\resources\views" />
       <recent name="C:\Users\lukas\Documents\GitHub\ISP_laravel\Skytech_20\resources\Pagalbos" />
@@ -167,7 +188,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604946161476</updated>
-      <workItem from="1604946162534" duration="5323000" />
+      <workItem from="1604946162534" duration="11287000" />
     </task>
     <servers />
   </component>
@@ -175,9 +196,13 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1065" y="521" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604950155046">
+    <state x="1065" y="521" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604954613403">
       <screen x="66" y="0" width="2494" height="1440" />
     </state>
-    <state x="1065" y="521" key="#com.intellij.fileTypes.FileTypeChooser/66.0.2494.1440/-1920.0.1920.1080@66.0.2494.1440" timestamp="1604950155046" />
+    <state x="1065" y="521" key="#com.intellij.fileTypes.FileTypeChooser/66.0.2494.1440/-1920.0.1920.1080@66.0.2494.1440" timestamp="1604954613403" />
+    <state x="1147" y="643" key="NewPhpFileDialog" timestamp="1604953831054">
+      <screen x="66" y="0" width="2494" height="1440" />
+    </state>
+    <state x="1147" y="643" key="NewPhpFileDialog/66.0.2494.1440/-1920.0.1920.1080@66.0.2494.1440" timestamp="1604953831054" />
   </component>
 </project>
