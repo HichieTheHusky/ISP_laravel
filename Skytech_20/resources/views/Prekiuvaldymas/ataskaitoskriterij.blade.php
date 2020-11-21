@@ -15,7 +15,7 @@
                         @endif
 
                         {{ __('informacija') }}
-                        <a class="btn btn-primary" href="{{ route('prekes') }}">{{ __('uzpildziau') }}</a>
+                        <a class="btn btn-primary" href="{{ route('ataskaitoskriterij') }}">{{ __('uzpildziau') }}</a>
                     </div>
                 </div>
             </div>

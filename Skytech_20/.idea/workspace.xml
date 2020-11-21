@@ -2,41 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d76c456b-c10d-42de-bfce-9a6fe50a9a8a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/Administravimas/ataskaita.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Administravimas/darbuotojai.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Administravimas/darbuotojas.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Administravimas/darbuotojopridejimas.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Administravimas/darbuotojoredag.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/ataskaitoskriterij.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/komentarasred.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/preke.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/prekes.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/prekespridejimas.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/prekesredag.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/prekesvertinimas.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/uzsakymosudarymas.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Surinkimas/daliesduomenu.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Surinkimas/dalis.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Surinkimas/filtravimo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Surinkimas/surinkimopasirinkimolangas.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Uzsakymai/nepatuzsakymusarasas.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Uzsakymai/uzsakymas.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Uzsakymai/uzsakymoataskaitos.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Uzsakymai/uzsakymusarasas.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Vartotojo/isimintinosprekes.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Vartotojo/profilis.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Vartotojo/profilisredagavimas.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Administravimas/ataskaita.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Administravimas/ataskaita.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Administravimas/darbuotojas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Administravimas/darbuotojas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/ataskaitoskriterij.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/ataskaitoskriterij.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/prekes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/prekes.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Surinkimas/dalis.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Surinkimas/dalis.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -188,7 +167,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604946161476</updated>
-      <workItem from="1604946162534" duration="11287000" />
+      <workItem from="1604946162534" duration="11970000" />
+      <workItem from="1604998958014" duration="2898000" />
+      <workItem from="1605081231672" duration="45000" />
+      <workItem from="1605178888032" duration="289000" />
     </task>
     <servers />
   </component>

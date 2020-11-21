@@ -13,11 +13,14 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-
+                        <a class="btn btn-primary" href="{{ route('ataskaitoskriterij') }}">{{ __('Ataskaitos kriterių langas') }}</a>
+                           <br>
+                           <br>
+                           <br>
                         {{ __('Prekių duommenys') }}
                         <a class="btn btn-primary" href="{{ route('preke') }}">{{ __('Prekės peržiūra') }}</a>
                         <a class="btn btn-primary" href="{{ route('prekesredag') }}">{{ __('Prekės redagavimo forma') }}</a>
-                        <a class="btn btn-primary" href="{{ route('ataskaitoskriterij') }}">{{ __('Ataskaitos kriterių langas') }}</a>
+
                     </div>
                 </div>
             </div>
