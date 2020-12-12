@@ -21,9 +21,11 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::view('pagalbos', 'pagalbos')->name('pagalbos');
 Route::view('bilietoforma', 'bilietoforma')->name('bilietoforma');
-Route::view('bilietas', 'bilietas')->name('bilietas');
+Route::post('/createBilietas', [App\Http\Controllers\PagalbosController::class, 'makeBilietas'])->name('createBilietas');
+Route::get('pagalbos', [App\Http\Controllers\PagalbosController::class, 'bilietai'])->name('pagalbos');
+Route::get('bilietas', [App\Http\Controllers\PagalbosController::class, 'bilietas'])->name('bilietas');
+Route::post('/createKomentaras', [App\Http\Controllers\PagalbosController::class, 'makeZinutes'])->name('createKomentaras');
 Route::view('paskirsti', 'paskirsti')->name('paskirsti');
 Route::view('uzdaryti', 'uzdaryti')->name('uzdaryti');
 Route::view('vertinti', 'vertinti')->name('vertinti');

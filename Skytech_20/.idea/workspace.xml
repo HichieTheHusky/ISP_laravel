@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d76c456b-c10d-42de-bfce-9a6fe50a9a8a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Administravimas/ataskaita.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Administravimas/ataskaita.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Administravimas/darbuotojas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Administravimas/darbuotojas.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/ataskaitoskriterij.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/ataskaitoskriterij.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/prekes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Prekiuvaldymas/prekes.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Surinkimas/dalis.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Surinkimas/dalis.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Pagalba/bilietas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Pagalba/bilietas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Pagalba/bilietoforma.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Pagalba/bilietoforma.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Pagalba/pagalbos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Pagalba/pagalbos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +141,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tinklai_laravel/blog" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -171,6 +171,12 @@
       <workItem from="1604998958014" duration="2898000" />
       <workItem from="1605081231672" duration="45000" />
       <workItem from="1605178888032" duration="289000" />
+      <workItem from="1606405406579" duration="24000" />
+      <workItem from="1606406616837" duration="742000" />
+      <workItem from="1606408370369" duration="2000" />
+      <workItem from="1606469934427" duration="60000" />
+      <workItem from="1607587336930" duration="7308000" />
+      <workItem from="1607759647393" duration="16176000" />
     </task>
     <servers />
   </component>
@@ -182,9 +188,21 @@
       <screen x="66" y="0" width="2494" height="1440" />
     </state>
     <state x="1065" y="521" key="#com.intellij.fileTypes.FileTypeChooser/66.0.2494.1440/-1920.0.1920.1080@66.0.2494.1440" timestamp="1604954613403" />
+    <state x="1042" y="474" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607765160446">
+      <screen x="64" y="0" width="2496" height="1440" />
+    </state>
+    <state x="1042" y="474" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/64.0.2496.1440/-1920.162.1920.1080@64.0.2496.1440" timestamp="1607765160446" />
+    <state x="1092" y="474" key="FileChooserDialogImpl" timestamp="1606469993292">
+      <screen x="64" y="0" width="2496" height="1440" />
+    </state>
+    <state x="1092" y="474" key="FileChooserDialogImpl/64.0.2496.1440/-1920.0.1920.1080@64.0.2496.1440" timestamp="1606469993292" />
     <state x="1147" y="643" key="NewPhpFileDialog" timestamp="1604953831054">
       <screen x="66" y="0" width="2494" height="1440" />
     </state>
     <state x="1147" y="643" key="NewPhpFileDialog/66.0.2494.1440/-1920.0.1920.1080@66.0.2494.1440" timestamp="1604953831054" />
+    <state x="968" y="340" key="run.anything.popup" timestamp="1607593650148">
+      <screen x="64" y="0" width="2496" height="1440" />
+    </state>
+    <state x="968" y="340" key="run.anything.popup/64.0.2496.1440/-1920.162.1920.1080@64.0.2496.1440" timestamp="1607593650148" />
   </component>
 </project>
