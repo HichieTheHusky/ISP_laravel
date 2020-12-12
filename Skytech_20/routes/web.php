@@ -26,10 +26,8 @@ Route::post('/createBilietas', [App\Http\Controllers\PagalbosController::class, 
 Route::get('pagalbos', [App\Http\Controllers\PagalbosController::class, 'bilietai'])->name('pagalbos');
 Route::get('bilietas', [App\Http\Controllers\PagalbosController::class, 'bilietas'])->name('bilietas');
 Route::post('/createKomentaras', [App\Http\Controllers\PagalbosController::class, 'makeZinutes'])->name('createKomentaras');
-
 Route::get('paskirsti', [App\Http\Controllers\PagalbosController::class, 'paskirsti'])->name('paskirsti');
 Route::post('/createBilietoPriskirimas', [App\Http\Controllers\PagalbosController::class, 'makePaskirimas'])->name('createBilietoPriskirimas');
-
 Route::get('uzdaryti', [App\Http\Controllers\PagalbosController::class, 'uzdaryti'])->name('uzdaryti');
 Route::post('/createBilietoUzdarymas', [App\Http\Controllers\PagalbosController::class, 'makeUzdarymas'])->name('createBilietoUzdarymas');
 Route::get('vertinti', [App\Http\Controllers\PagalbosController::class, 'vertinti'])->name('vertinti');
