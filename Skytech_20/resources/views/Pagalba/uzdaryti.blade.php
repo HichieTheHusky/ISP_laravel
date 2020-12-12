@@ -14,8 +14,21 @@
                             </div>
                         @endif
 
-                        {{ __('Uzdarimo informacija') }}
-                        <a class="btn btn-primary" href="{{ route('pagalbos') }}">{{ __('uzpildziau') }}</a>
+                            <form method="post" action="{{ route('createBilietoUzdarymas') }}">
+                                @csrf
+                                <div class="form-group">
+                                    <label for="komentaras">Komentaras</label>
+                                    <input type="text" class="form-control" name="komentaras" id="komentaras" aria-describedby="emailHelp" placeholder="Įveskite komentara">
+                                    @error('komentaras')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+
+                                <input type="hidden" id="id" name="id" value={{ $ID }}>
+                                <button type="submit" class="btn btn-success">Uždaryti</button>
+                            </form>
                     </div>
                 </div>
             </div>

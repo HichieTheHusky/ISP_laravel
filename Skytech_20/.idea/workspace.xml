@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d76c456b-c10d-42de-bfce-9a6fe50a9a8a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Pagalba/bilietas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Pagalba/bilietas.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Pagalba/bilietoforma.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Pagalba/bilietoforma.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PagalbosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagalbosController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Pagalba/pagalbos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Pagalba/pagalbos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Pagalba/paskirsti.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Pagalba/paskirsti.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Pagalba/uzdaryti.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Pagalba/uzdaryti.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Pagalba/vertinti.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Pagalba/vertinti.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +176,7 @@
       <workItem from="1606408370369" duration="2000" />
       <workItem from="1606469934427" duration="60000" />
       <workItem from="1607587336930" duration="7308000" />
-      <workItem from="1607759647393" duration="16176000" />
+      <workItem from="1607759647393" duration="25778000" />
     </task>
     <servers />
   </component>
@@ -200,9 +200,13 @@
       <screen x="66" y="0" width="2494" height="1440" />
     </state>
     <state x="1147" y="643" key="NewPhpFileDialog/66.0.2494.1440/-1920.0.1920.1080@66.0.2494.1440" timestamp="1604953831054" />
-    <state x="968" y="340" key="run.anything.popup" timestamp="1607593650148">
+    <state x="968" y="340" key="run.anything.popup" timestamp="1607785267390">
       <screen x="64" y="0" width="2496" height="1440" />
     </state>
-    <state x="968" y="340" key="run.anything.popup/64.0.2496.1440/-1920.162.1920.1080@64.0.2496.1440" timestamp="1607593650148" />
+    <state x="968" y="340" key="run.anything.popup/64.0.2496.1440/-1920.162.1920.1080@64.0.2496.1440" timestamp="1607785267390" />
+    <state x="975" y="325" width="672" height="678" key="search.everywhere.popup" timestamp="1607782838255">
+      <screen x="64" y="0" width="2496" height="1440" />
+    </state>
+    <state x="975" y="325" width="672" height="678" key="search.everywhere.popup/64.0.2496.1440/-1920.162.1920.1080@64.0.2496.1440" timestamp="1607782838255" />
   </component>
 </project>

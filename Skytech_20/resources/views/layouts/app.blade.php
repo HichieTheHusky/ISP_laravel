@@ -31,6 +31,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    @auth
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
@@ -88,12 +89,8 @@
                                 <a class="nav-link" href="{{ route('bilietoforma') }}">{{ __('Bilieto sukurimas') }}</a>
                             </div>
                         </li>
-
-
-
-
-                    </ul>
-
+                     </ul>
+                    @endauth
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
