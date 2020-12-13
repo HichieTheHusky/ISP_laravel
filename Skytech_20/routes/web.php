@@ -40,8 +40,12 @@ Route::view('surinkimopasirinkimolangas', 'surinkimopasirinkimolangas')->name('s
 Route::view('filtravimo', 'filtravimo')->name('filtravimo');
 
 
-Route::view('profilis', 'profilis')->name('profilis');
-Route::view('profilisredagavimas', 'profilisredagavimas')->name('profilisredagavimas');
+Route::get('/profilis/{id}', [App\Http\Controllers\VartotojoController::class, 'profilis'])->name('Vartotojo.profilis');
+Route::get('/profilisredagavimas', [App\Http\Controllers\VartotojoController::class, 'redagavimas'])->name('profilisredagavimas');
+Route::post('/profilisredagavimas', [App\Http\Controllers\VartotojoController::class, 'atnaujinimas'])->name('profilisredagavimas');
+//Route::get('/profilis/{id}', 'VartotojoController@profilis')->name('Vartotojo.profilis');
+//Route::view('profilis', 'profilis')->name('profilis');
+//Route::view('profilisredagavimas', 'profilisredagavimas')->name('profilisredagavimas');
 Route::view('isimintinosprekes', 'isimintinosprekes')->name('isimintinosprekes');
 
 
