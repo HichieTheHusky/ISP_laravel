@@ -38,6 +38,9 @@ class VartotojoController extends Controller
             {
                 $validate = $request->validate([
                     'name' => 'required|min:2',
+                    'surname' => 'required|min:2',
+                    'address'=> 'required',
+                    'telephone'=> 'required',
                     'email' => 'required|email'
                 ]);
             }
@@ -45,6 +48,9 @@ class VartotojoController extends Controller
             {
                 $validate = $request->validate([
                     'name' => 'required|min:2',
+                    'surname' => 'required|min:2',
+                    'address'=> 'required',
+                    'telephone'=> 'required',
                     'email' => 'required|email|unique:users'
                 ]);
             }
@@ -52,6 +58,9 @@ class VartotojoController extends Controller
             {
                 $user->name = $request['name'];
                 $user->email = $request['email'];
+                $user->surname = $request['surname'];
+                $user->telephone = $request['telephone'];
+                $user->address = $request['address'];
                 $user->save();
                 $request ->session()->flash('success', 'Duomenis pavyko atnaujinti');
                 return redirect()->back();

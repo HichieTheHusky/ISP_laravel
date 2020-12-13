@@ -20,8 +20,20 @@
                             <th>{{ $user['name'] }}</th>
                         </tr>
                         <tr>
+                            <th>Pavardė</th>
+                            <th>{{ $user['surname'] }}</th>
+                        </tr>
+                        <tr>
+                            <th>Telefono numeris</th>
+                            <th>{{ $user['telephone'] }}</th>
+                        </tr>
+                        <tr>
                             <th>Email</th>
                             <th>{{ $user['email'] }}</th>
+                        </tr>
+                        <tr>
+                            <th>Adresas</th>
+                            <th>{{ $user['address'] }}</th>
                         </tr>
                         <tr>
                             <th>Paskyros sukūrimo data</th>
