@@ -8,6 +8,7 @@ use App\Models\Bilietas;
 use App\Models\Zinutes;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class PagalbosController extends Controller
 {
@@ -63,14 +64,29 @@ class PagalbosController extends Controller
 
     public function makeZinutes(Request $request)
     {
-        $zinutes = new Zinutes();
-        $zinutes->fk_rasytojas = auth()->user()->id;
-        $zinutes->fk_bilietas = $request['id'];
-        $zinutes->tekstas = $request['tekstas'];
-        $zinutes->save();
+
+        $zinute = new Zinutes();
+        $zinute->fk_rasytojas = auth()->user()->id;
+        $zinute->fk_bilietas = $request['id'];
+        $zinute->tekstas = $request['tekstas'];
+//        $zinute->save();
 
         $bilietas = Bilietas::find($request['id']);
         $zinutes = Zinutes::where('fk_bilietas',$bilietas->getAttribute('id'))->get()->all();
+
+        if($bilietas->fk_vartotojas == auth()->user()->id)
+            $to = User::find($bilietas->fk_darbuotojas);
+        else
+            $to = User::find($bilietas->fk_vartotojas);
+
+
+        Mail::send([], [], function ($message) use ($zinute, $bilietas, $to) {
+            $string = "<h1>Sveiki, jūs gavote žinute!</h1> <br>".$zinute->tekstas;
+            $message->to($to->email, $to->name)
+                ->from('sky.pagalba@gmail.com','SKY pagalba')
+                ->subject($bilietas->pavadinimas)
+                ->setBody($string,'text/html'); // for HTML rich messages
+        });
 
         return view('bilietas', compact('bilietas','zinutes'));
     }

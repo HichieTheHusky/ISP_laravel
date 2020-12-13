@@ -4,11 +4,6 @@
     <list default="true" id="d76c456b-c10d-42de-bfce-9a6fe50a9a8a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PagalbosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagalbosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Pagalba/pagalbos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Pagalba/pagalbos.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Pagalba/paskirsti.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Pagalba/paskirsti.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Pagalba/uzdaryti.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Pagalba/uzdaryti.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Pagalba/vertinti.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Pagalba/vertinti.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +171,8 @@
       <workItem from="1606408370369" duration="2000" />
       <workItem from="1606469934427" duration="60000" />
       <workItem from="1607587336930" duration="7308000" />
-      <workItem from="1607759647393" duration="25778000" />
+      <workItem from="1607759647393" duration="26037000" />
+      <workItem from="1607849720625" duration="2759000" />
     </task>
     <servers />
   </component>
