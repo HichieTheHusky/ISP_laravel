@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7701409-fb26-4915-82c0-767d49d45a06" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ISP_laravel.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Skytech_20/app/Http/Controllers/AdministravimoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Skytech_20/app/Models/Uzsakymas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skytech_20/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skytech_20/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skytech_20/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skytech_20/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skytech_20/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/darbuotojai.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/darbuotojai.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/darbuotojopridejimas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/darbuotojopridejimas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/darbuotojoredag.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/darbuotojoredag.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skytech_20/resources/views/Uzsakymai/nepatuzsakymusarasas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Uzsakymai/nepatuzsakymusarasas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skytech_20/resources/views/Uzsakymai/uzsakymusarasas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Uzsakymai/uzsakymusarasas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skytech_20/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,13 +147,18 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1k427llONKb5F8brIhqwyJ1RTP6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Skytech_20" />
@@ -160,16 +175,28 @@
       <updated>1604945378781</updated>
       <workItem from="1604945380446" duration="336000" />
       <workItem from="1604946080888" duration="80000" />
+      <workItem from="1607678536764" duration="873000" />
+      <workItem from="1607781499446" duration="14325000" />
+      <workItem from="1607861873515" duration="17866000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="1093" y="474" key="FileChooserDialogImpl" timestamp="1604946157222">
-      <screen x="66" y="0" width="2494" height="1440" />
-    </state>
-    <state x="1093" y="474" key="FileChooserDialogImpl/66.0.2494.1440/-1920.0.1920.1080@66.0.2494.1440" timestamp="1604946157222" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

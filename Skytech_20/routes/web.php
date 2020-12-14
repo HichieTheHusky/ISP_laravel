@@ -64,11 +64,12 @@ Route::view('komentarasred', 'komentarasred')->name('komentarasred');
 Route::view('prekesvertinimas', 'prekesvertinimas')->name('prekesvertinimas');
 Route::view('uzsakymosudarymas', 'uzsakymosudarymas')->name('uzsakymosudarymas');
 
-
 Route::view('darbuotojopridejimas', 'darbuotojopridejimas')->name('darbuotojopridejimas');
-Route::view('darbuotojai', 'darbuotojai')->name('darbuotojai');
+Route::post('darbuotojopridejimas', [App\Http\Controllers\AdministravimoController::class, 'pridetiDarbuotoja'])->name('darbuotojopridejimas');
+Route::get('darbuotojai', [App\Http\Controllers\AdministravimoController::class, 'darbuotojai'])->name('darbuotojai');
 Route::view('darbuotojas', 'darbuotojas')->name('darbuotojas');
-Route::view('darbuotojoredag', 'darbuotojoredag')->name('darbuotojoredag');
+Route::get('/darbuotojoredag/{id}', [App\Http\Controllers\AdministravimoController::class, 'redaguoti'])->name('darbuotojoredag');
+Route::post('/darbuotojoredag', [App\Http\Controllers\AdministravimoController::class, 'redaguotiDarbuotoja'])->name('darbuotojas.redagavimas');
 Route::view('ataskaita', 'ataskaita')->name('ataskaita');
 
 

@@ -15,12 +15,34 @@
                         @endif
 
                         <a class="btn btn-primary" href="{{ route('ataskaita') }}">{{ __('Ataskaita') }}</a>
+                        <a class="btn btn-primary" href="{{ route('darbuotojopridejimas') }}"> {{ __('Darbuotojo pridėjimas') }}</a>
 <br>
 <br>
 <br>
-                        {{ __('Darbuotojai') }}
-                        <a class="btn btn-primary" href="{{ route('darbuotojas') }}">{{ __('Darbuotojo duomenys') }}</a>
-                        <a class="btn btn-primary" href="{{ route('darbuotojoredag') }}">{{ __('Darbuotojo redagavimo forma') }}</a>
+                            <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Vardas</th>
+                                    <th>Pavardė</th>
+                                    <th>El.Paštas</th>
+                                    <th>Sukurtas</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($users as $user)
+                                    <tr>
+                                        <td>{{$user->id}}</td>
+                                        <td>{{$user->name}}</td>
+                                        <td>{{$user->surname}}</td>
+                                        <td>{{$user->email}}</td>
+                                        <td>{{$user->created_at}}</td>
+                                        <td><a class="btn btn-primary" href="{{ route('darbuotojoredag', $user->id) }}">{{ __('Redaguoti') }}</a></td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
                     </div>
                 </div>
             </div>

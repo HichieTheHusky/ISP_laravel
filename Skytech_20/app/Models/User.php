@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -52,5 +53,10 @@ class User extends Authenticatable
     public function zinutes(): BelongsTo
     {
         return $this->belongsTo(Zinutes::class, 'fk_vartotojas');
+    }
+
+    public function uzsakymai(): BelongsTo
+    {
+        return $this->belongsTo(Uzsakymas::class, 'fk_vartotojas');
     }
 }
