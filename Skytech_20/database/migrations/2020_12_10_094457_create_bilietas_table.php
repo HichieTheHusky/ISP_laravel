@@ -32,7 +32,7 @@ class CreateBilietasTable extends Migration
             $table->string('vartotojo_komentaras')->nullable();
             $table->integer('pagalbos_ivertis')->nullable();
             $table->integer('benravimo_ivertis')->nullable();
-            $table->integer('greicio_ivertis')->nullable();
+            $table->integer('`greicio_ivertis`')->nullable();
 
         });
     }
