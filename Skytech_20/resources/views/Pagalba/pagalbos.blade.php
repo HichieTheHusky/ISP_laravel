@@ -14,11 +14,6 @@
                             </div>
                         @endif
 
-{{--                        {{ __('Teoretiniai bilietas') }}--}}
-{{--                            <a class="btn btn-primary" href="{{ route('bilietas') }}">{{ __('ziureti') }}</a>--}}
-{{--                            <a class="btn btn-primary" href="{{ route('vertinti') }}">{{ __('Vertinti') }}</a>--}}
-{{--                            <a class="btn btn-primary" href="{{ route('uzdaryti') }}">{{ __('Uzdaryti') }}</a>--}}
-{{--                            <a class="btn btn-primary" href="{{ route('paskirsti') }}">{{ __('Paskirstyti') }}</a>--}}
 
                             <table id="datatable-buttons" class="table table-sm table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                 <thead>

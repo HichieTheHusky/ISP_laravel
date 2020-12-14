@@ -44,10 +44,12 @@ Route::get('/profilis/{id}', [App\Http\Controllers\VartotojoController::class, '
 Route::get('/profilisredagavimas', [App\Http\Controllers\VartotojoController::class, 'redagavimas'])->name('profilisredagavimas');
 Route::post('/profilisredagavimas', [App\Http\Controllers\VartotojoController::class, 'atnaujinimas'])->name('profilisredagavimas');
 
+
+
 //Route::view('profilis', 'profilis')->name('profilis');
 //Route::view('profilisredagavimas', 'profilisredagavimas')->name('profilisredagavimas');
 Route::view('isimintinosprekes', 'isimintinosprekes')->name('isimintinosprekes');
-
+Route::post('/isiminti', [App\Http\Controllers\PrekesController::class, 'isimintiPreke'])->name('isiminti');
 
 Route::view('uzsakymoataskaitos', 'uzsakymoataskaitos')->name('uzsakymoataskaitos');
 Route::view('uzsakymusarasas', 'uzsakymusarasas')->name('uzsakymusarasas');
@@ -56,7 +58,8 @@ Route::view('uzsakymas', 'uzsakymas')->name('uzsakymas');
 
 
 Route::view('prekespridejimas', 'prekespridejimas')->name('prekespridejimas');
-Route::view('prekes', 'prekes')->name('prekes');
+Route::get('prekes', [App\Http\Controllers\PrekesController::class, 'prekes'])->name('prekes');
+
 Route::view('preke', 'preke')->name('preke');
 Route::view('prekesredag', 'prekesredag')->name('prekesredag');
 Route::view('ataskaitoskriterij', 'ataskaitoskriterij')->name('ataskaitoskriterij');
