@@ -51,7 +51,7 @@
                             </div>
                         </li>
 
-
+                        @if (auth()->user()->user_type == \App\Models\User::ROLE_ADMIN)
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ __('Administravimas') }}
@@ -62,7 +62,7 @@
                                 <a class="nav-link" href="{{ route('darbuotojai') }}">{{ __('Darbuotojų  sarašas') }}</a>
                             </div>
                         </li>
-
+                        @endif
 
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
