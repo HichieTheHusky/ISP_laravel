@@ -9,11 +9,12 @@ use Illuminate\Support\Facades\Auth;
 
 class VartotojoController extends Controller
 {
-    public function profilis($id)
+    public function profilis()
     {
-        $user  = User::find($id);
+        $userId = auth()->user()->id;
+        $user = User::find($userId);
         if ($user)
-            return view('Vartotojo.profilis') -> withUser($user);
+            return view('/profilis') -> withUser($user);
         else
             return redirect()->back();
     }

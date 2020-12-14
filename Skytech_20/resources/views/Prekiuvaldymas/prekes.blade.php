@@ -38,7 +38,7 @@
                     <tbody>
                         @foreach($prekes as $preke)
                             <tr>
-                                <td style="vertical-align: middle">{{ $preke->kodas }}</td>
+                                <td style="vertical-align: middle">{{ $preke-> kodas }}</td>
                                 <td style="vertical-align: middle">{{ $preke->pavadinimas }}</td>
                                 <td style="vertical-align: middle">{{ $preke->gamintojas }}</td>
                                 <td style="vertical-align: middle">{{ $preke->aprašymas }}</td>

@@ -117,7 +117,7 @@
 
                                     <a class="dropdown-item" href="{{ route('Vartotojo.profilis', Auth::user()->id) }}">{{ __('Profilis') }}</a>
 
-                                    <a class="dropdown-item" href="{{ route('isimintinosprekes') }}">{{ __('Isimintinos Prekės') }}</a>
+                                    <a class="dropdown-item" href="{{ route('isimintinosprekes') }}">{{ __('Įsimintinos prekės') }}</a>
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
