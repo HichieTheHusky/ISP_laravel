@@ -49,4 +49,9 @@ class Uzsakymas extends Model
     {
         return $this->hasOne(User::class, 'id', 'fk_darbuotojas');
     }
+
+    public function prekes()
+    {
+        return $this->belongsToMany(Preke::class, 'prekes_uzsakymas', 'fk_preke', 'fk_uzsakymas');
+    }
 }

@@ -54,6 +54,11 @@
                                 </div>
 
                                 <button type="submit" class="btn btn-success">Sukurti paskyrą</button>
+                                @error('generic')
+                                <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                @enderror
                             </form>
                     </div>
                 </div>

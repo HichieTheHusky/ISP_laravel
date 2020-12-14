@@ -69,7 +69,7 @@ class PagalbosController extends Controller
         $zinute->fk_rasytojas = auth()->user()->id;
         $zinute->fk_bilietas = $request['id'];
         $zinute->tekstas = $request['tekstas'];
-//        $zinute->save();
+        $zinute->save();
 
         $bilietas = Bilietas::find($request['id']);
         $zinutes = Zinutes::where('fk_bilietas',$bilietas->getAttribute('id'))->get()->all();
