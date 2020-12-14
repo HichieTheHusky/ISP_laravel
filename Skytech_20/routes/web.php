@@ -59,6 +59,7 @@ Route::view('uzsakymas', 'uzsakymas')->name('uzsakymas');
 
 Route::view('prekespridejimas', 'prekespridejimas')->name('prekespridejimas');
 Route::get('prekes', [App\Http\Controllers\PrekesController::class, 'prekes'])->name('prekes');
+Route::post('prekespridejimas', [App\Http\Controllers\PrekesController::class, 'pridetiPreke'])->name('prekespridejimas');
 
 Route::view('preke', 'preke')->name('preke');
 Route::view('prekesredag', 'prekesredag')->name('prekesredag');
