@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d76c456b-c10d-42de-bfce-9a6fe50a9a8a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PagalbosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagalbosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Uzsakymas.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Uzsakymas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Pagalba/bilietoforma.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Pagalba/bilietoforma.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +173,7 @@
       <workItem from="1607759647393" duration="26037000" />
       <workItem from="1607849720625" duration="2759000" />
       <workItem from="1607873581060" duration="500000" />
-      <workItem from="1607929635706" duration="2923000" />
+      <workItem from="1607929635706" duration="3356000" />
     </task>
     <servers />
   </component>
@@ -184,6 +181,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1255" y="378" width="1092" height="729" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607932429671">
+      <screen x="64" y="0" width="2496" height="1440" />
+    </state>
+    <state x="1255" y="378" width="1092" height="729" key="#com.intellij.execution.impl.EditConfigurationsDialog/64.0.2496.1440/-1920.162.1920.1080@64.0.2496.1440" timestamp="1607932429671" />
     <state x="1065" y="521" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604954613403">
       <screen x="66" y="0" width="2494" height="1440" />
     </state>
