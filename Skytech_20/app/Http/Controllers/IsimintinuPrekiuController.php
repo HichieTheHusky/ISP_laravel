@@ -27,4 +27,26 @@ class IsimintinuPrekiuController extends Controller
         return view('isimintinosprekes', compact('merged'));
       
     }
+
+    public function filtras($kategorija)
+    {
+        $userId = auth()->user()->id;
+        $isimintinos_prekes = DB::table('isiminimas')->select('fk_preke')->where('fk_user' , '=', $userId)->get();
+
+       $merged = null;
+
+        foreach ($isimintinos_prekes as $preke)
+        {
+            if($kategorija != null)
+                $result = DB::table('prekes')->select('Kodas', 'Pavadinimas', 'Gamintojas', 'Aprašymas', 'Kaina')->where('id', '=', $preke -> fk_preke)->where('kategorija', '=', $kategorija)->get();
+            else
+                $result = DB::table('prekes')->select('Kodas', 'Pavadinimas', 'Gamintojas', 'Aprašymas', 'Kaina')->where('id', '=', $preke -> fk_preke)->get();
+            $merged = $result -> merge($merged);
+        }
+
+        
+  
+
+        return view('isimintinosprekes') -> with('merged', $merged);
+    }
 }

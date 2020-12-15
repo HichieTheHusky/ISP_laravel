@@ -70,8 +70,16 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            @if (auth()->user()->user_type == \App\Models\User::ROLE_USER)
+                                <a class="nav-link" href="{{ route('uzsakymusarasas') }}">{{ __('Užsakymų istorija') }}</a>
+                                @endif
+                            @if (auth()->user()->user_type == \App\Models\User::ROLE_USER)
                                 <a class="nav-link" href="{{ route('uzsakymoataskaitos') }}">{{ __('Užsakymų ataskaita') }}</a>
+                            @endif
+                                @if (auth()->user()->user_type == \App\Models\User::ROLE_WORKER)
                                 <a class="nav-link" href="{{ route('uzsakymusarasas') }}">{{ __('Darbuotoju Užsakymų sąrašas') }}</a>
+                                @endif
+                             
                             </div>
                         </li>
 
@@ -98,13 +106,13 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Prisijungimas') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Registracija') }}</a>
                                 </li>
                             @endif
                         @else

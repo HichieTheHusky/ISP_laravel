@@ -2,6 +2,17 @@
 
 @section('content')
     <div class="container">
+    Filtras:
+    <a href="{{ route('filtravimas', 'motinine') }}">Motininė ploštė</a> |
+    <a href="{{ route('filtravimas', 'vaizdo') }}">Vaidzdo ploktė</a> |
+    <a href="{{ route('filtravimas', 'diskas') }}">Diskas</a> |
+    <a href="{{ route('filtravimas', 'ram') }}">Ram</a> |
+    <a href="{{ route('filtravimas', 'procesorius') }}">Procesorius</a> |
+    <a href="{{ route('filtravimas', 'maitinimas') }}">Maitinimo šaltinis</a> |
+    <a href="{{ route('filtravimas', 'korpusas') }}">Korpusas</a> |
+    <a href="{{ route('isimintinosprekes') }}">Visi</a> 
+    <br>
+    <br>
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">

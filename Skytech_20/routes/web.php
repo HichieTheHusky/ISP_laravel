@@ -50,6 +50,8 @@ Route::post('/profilisredagavimas', [App\Http\Controllers\VartotojoController::c
 //Route::view('profilisredagavimas', 'profilisredagavimas')->name('profilisredagavimas');
 Route::get('/isimintinosprekes', [App\Http\Controllers\IsimintinuPrekiuController::class, 'atvaizduotiPrekes'])->name('isimintinosprekes');
 Route::post('/isiminti', [App\Http\Controllers\PrekesController::class, 'isimintiPreke'])->name('isiminti');
+Route::get('/isimintinosprekes/{kategorija}', [App\Http\Controllers\IsimintinuPrekiuController::class, 'filtras'])->name('filtravimas');;
+
 
 Route::view('uzsakymoataskaitos', 'uzsakymoataskaitos')->name('uzsakymoataskaitos');
 Route::view('uzsakymusarasas', 'uzsakymusarasas')->name('uzsakymusarasas');
