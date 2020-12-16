@@ -10,7 +10,7 @@
     <a href="{{ route('filtravimas', 'procesorius') }}">Procesorius</a> |
     <a href="{{ route('filtravimas', 'maitinimas') }}">Maitinimo šaltinis</a> |
     <a href="{{ route('filtravimas', 'korpusas') }}">Korpusas</a> |
-    <a href="{{ route('isimintinosprekes') }}">Visi</a> 
+    <a href="{{ route('filtravimas', '') }}">Visi</a> 
     <br>
     <br>
         <div class="row justify-content-center">

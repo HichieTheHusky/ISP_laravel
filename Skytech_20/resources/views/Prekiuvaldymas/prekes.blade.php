@@ -2,6 +2,15 @@
 
 @section('content')
     <div class="container">
+    Filtras:
+    <a href="{{ route('filtrinti', 'motinine') }}">Motininė ploštė</a> |
+    <a href="{{ route('filtrinti', 'vaizdo') }}">Vaidzdo ploktė</a> |
+    <a href="{{ route('filtrinti', 'diskas') }}">Diskas</a> |
+    <a href="{{ route('filtrinti', 'ram') }}">Ram</a> |
+    <a href="{{ route('filtrinti', 'procesorius') }}">Procesorius</a> |
+    <a href="{{ route('filtrinti', 'maitinimas') }}">Maitinimo šaltinis</a> |
+    <a href="{{ route('filtrinti', 'korpusas') }}">Korpusas</a> |
+    <a href="{{ route('filtrinti', '') }}">Visi</a> 
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
@@ -13,7 +22,11 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-
+                        @if(session('success'))
+                            <div class = "alert" role="alert">
+                            {{session('success')}}
+                            </div>
+                        @endif
                         @if (auth()->user()->user_type == \App\Models\User::ROLE_ADMIN)
                         <a class="btn btn-primary" href="{{ route('ataskaitoskriterij') }}">{{ __('Ataskaitos kriterių langas') }}</a>
                            <br>
