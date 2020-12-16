@@ -66,7 +66,7 @@
                                 @endif
 
                                 @if (auth()->user()->user_type == \App\Models\User::ROLE_USER) 
-                                    <form style="display: inline;" method="post" action="{{ route('isiminti', ['ID' => $preke->id]) }}" onclick="return confirm('Are jūs tikras?')">
+                                    <form style="display: inline;" method="post" action="{{ route('isiminti', ['ID' => $preke->id]) }}" >
                                         @csrf
                                         <button type="submit" class="btn btn-link p-0">Įsiminti</button>
                                     </form>
