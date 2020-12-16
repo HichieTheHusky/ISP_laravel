@@ -56,7 +56,7 @@ Route::get('/isimintinosprekes/{kategorija}', [App\Http\Controllers\IsimintinuPr
 Route::view('uzsakymoataskaitos', 'uzsakymoataskaitos')->name('uzsakymoataskaitos');
 Route::view('uzsakymusarasas', 'uzsakymusarasas')->name('uzsakymusarasas');
 Route::view('nepatuzsakymusarasas', 'nepatuzsakymusarasas')->name('nepatuzsakymusarasas');
-Route::view('uzsakymas', 'uzsakymas')->name('uzsakymas');
+Route::get('/uzsakymusarasas', [App\Http\Controllers\UzsakymoController::class, 'uzsakymas'])->name('uzsakymusarasas');
 
 
 Route::view('prekespridejimas', 'prekespridejimas')->name('prekespridejimas');
