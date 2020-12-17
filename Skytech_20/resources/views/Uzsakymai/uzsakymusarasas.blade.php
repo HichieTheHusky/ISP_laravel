@@ -38,11 +38,17 @@
                                 <td style="vertical-align: middle">{{ $uzsakymas->kaina }}€</td>
                                 <td style="vertical-align: middle">{{ $uzsakymas->kategorija }}</td>
                                 <td style="vertical-align: middle">{{ $uzsakymas->adresas }}</td>
-                                <td style="vertical-align: middle">{{ $uzsakymas->statusas }}</td>
+                                <td style="vertical-align: middle">{{$uzsakymas->statusas }}</td>
                                 <td style="vertical-align: middle">
-                                    <a class="btn btn-link p-0" href="/salinti">Šalinti</a> 
+                            @if( ($uzsakymas->statusas == 'Išsiųstas' ) || ($uzsakymas->statusas == 'Pristatytas'))
+                                 @else
+                                 <form style="display: inline;" method="post" action="{{ route('deleteOrder', ['ID' => $uzsakymas->id]) }}" onclick="return confirm('Ar tikrai norite pašalinti?')">
+                                    @csrf
+                                    <button type="submit" class="btn btn-sm btn-danger"  >Atšaukti</button>
+                                 </form>
+                            @endif
                                 </td>
-                                 -->
+                             
                                     </tr>
                                     <?php  $i++;?>
                         @endforeach
