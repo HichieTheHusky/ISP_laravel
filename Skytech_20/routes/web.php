@@ -54,10 +54,11 @@ Route::get('/isimintinosprekes/{kategorija}', [App\Http\Controllers\IsimintinuPr
 
 
 Route::view('uzsakymoataskaitos', 'uzsakymoataskaitos')->name('uzsakymoataskaitos');
-Route::view('uzsakymusarasas', 'uzsakymusarasas')->name('uzsakymusarasas');
+//Route::view('uzsakymusarasas', 'uzsakymusarasas')->name('uzsakymusarasas');
 Route::view('nepatuzsakymusarasas', 'nepatuzsakymusarasas')->name('nepatuzsakymusarasas');
 Route::get('/uzsakymusarasas', [App\Http\Controllers\UzsakymoController::class, 'uzsakymas'])->name('uzsakymusarasas');
 Route::post('/TrintiUžsakymą', [App\Http\Controllers\UzsakymoController::class, 'deleteOrder'])->name('deleteOrder');
+Route::post('/uzsakymusarasas', [App\Http\Controllers\UzsakymoController::class, 'filtruoti'])->name('uzsakymuFiltravimas');
 
 Route::view('prekespridejimas', 'prekespridejimas')->name('prekespridejimas');
 Route::get('prekes', [App\Http\Controllers\PrekesController::class, 'prekes'])->name('prekes');

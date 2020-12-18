@@ -21,8 +21,7 @@ class UzsakymoController extends Controller
     }
 
     public function deleteOrder(Request $request)
-    {
-        
+    {  
       //  dd($order);
       $prekes_uzsakymas = DB::table('prekes_uzsakymas')->select('*')->where('fk_uzsakymas' , '=', $request['ID'])->get();
         foreach ($prekes_uzsakymas as $prekes_uz)
@@ -31,8 +30,18 @@ class UzsakymoController extends Controller
             $affected = DB::table('prekes') ->where('id', '=' , $preke -> id )->update(['kiekis' => $preke -> kiekis + $prekes_uz -> kiekis]);
             DB::table('prekes_uzsakymas')->where('id', '=',  $prekes_uz -> id)->delete();
         }
-      DB::table('uzsakymas')->where('id', '=',  $request['ID'])->delete();
- 
+        DB::table('uzsakymas')->where('id', '=',  $request['ID'])->delete();
+        $request ->session()->flash('success', 'Užsakymą pavyko sėkmingai pašalinti');
         return redirect()->route('uzsakymusarasas');
+    }
+
+    public function filtruoti(Request $request)
+    {
+        $input1 = $request->input('from_date');
+        $input2 = $request->input('to_date');    
+
+        $user = User::find(Auth::user()->id);
+        $uzsakymai = Uzsakymas::where('fk_vartotojas', $user->id)->whereBetween('created_at', [$input1, $input2])->get()->all();
+        return view('uzsakymusarasas')-> with('uzsakymai', $uzsakymai);
     }
 }

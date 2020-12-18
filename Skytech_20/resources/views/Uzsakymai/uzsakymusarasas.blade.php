@@ -13,6 +13,32 @@
                                 {{ session('status') }}
                             </div>
                         @endif
+                        @if(session('success'))
+                            <div class = "alert" role="alert">
+                            {{session('success')}}
+                            </div>
+                        @endif
+                        <form  method="POST" action="{{ route('uzsakymuFiltravimas') }}">
+                        @csrf
+                        <div class ="row input-daterange">
+                            <div class ="col-md-4">
+                            Pradinė data
+                                <input type="datetime-local" name="from_date" id="from_date" class="form_control" placceholder="Pradinė data"  required/>
+                            </div>
+                            <div class ="col-md-4">
+                            Galinė data
+                                <input type="datetime-local" name="to_date" id="to_date" class="form_control" placceholder="Pradinė data" required/>
+                            </div>  
+                            <div class ="col-md-4">
+                            <br>
+                            <button type="submit" class="btn btn-primary">Filtruoti</button>
+                            <a class="btn btn-primary" href="{{ route('uzsakymusarasas') }}">{{ __('Visi') }}</a>
+                            </div> 
+                            
+                        </div>
+                        </form>
+
+
                         @if (auth()->user()->user_type == \App\Models\User::ROLE_WORKER)
                         <a class="btn btn-primary" href="{{ route('nepatuzsakymusarasas') }}">{{ __('Nepatvirtinti užsakymai') }}</a>
                         <a class="btn btn-primary" href="{{ route('uzsakymas') }}">{{ __('Ataskaita') }}</a>
