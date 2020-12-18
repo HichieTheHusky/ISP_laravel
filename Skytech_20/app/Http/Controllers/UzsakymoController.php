@@ -44,4 +44,14 @@ class UzsakymoController extends Controller
         $uzsakymai = Uzsakymas::where('fk_vartotojas', $user->id)->whereBetween('created_at', [$input1, $input2])->get()->all();
         return view('uzsakymusarasas')-> with('uzsakymai', $uzsakymai);
     }
+
+    public function ataskaita()
+    {
+        $user = User::find(Auth::user()->id);
+        $min = Uzsakymas::where('fk_vartotojas', $user->id)->min('kaina');
+        $max = Uzsakymas::where('fk_vartotojas', $user->id)->max('kaina');
+        $average = Uzsakymas::where('fk_vartotojas', $user->id)->average('kaina');
+        $sum = Uzsakymas::where('fk_vartotojas', $user->id)->sum('kaina');
+        return view('uzsakymoataskaitos', compact('min','max','average', 'sum'));
+    }
 }

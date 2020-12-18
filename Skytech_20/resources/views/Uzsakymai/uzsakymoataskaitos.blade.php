@@ -13,9 +13,12 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-
-                        {{ __('informacija') }}
-                        <a class="btn btn-primary" href="{{ route('home') }}">{{ __('uzpildziau') }}</a>
+                    Daugiausiai išleista užsakymo metu:  {{$min}}   <br>
+                    Mažiausiai išleista užsakymo metu:  {{$max}}     <br>
+                    Vidutiniškai išleista užsakymo metu:  {{$average}} <br>
+                    Bendra suma:                        {{$sum}}    <br>
+                       
+                       
                     </div>
                 </div>
             </div>

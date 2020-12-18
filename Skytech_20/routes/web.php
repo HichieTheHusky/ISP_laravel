@@ -46,15 +46,13 @@ Route::post('/profilisredagavimas', [App\Http\Controllers\VartotojoController::c
 
 
 
-//Route::view('profilis', 'profilis')->name('profilis');
-//Route::view('profilisredagavimas', 'profilisredagavimas')->name('profilisredagavimas');
 Route::get('/isimintinosprekes', [App\Http\Controllers\IsimintinuPrekiuController::class, 'atvaizduotiPrekes'])->name('isimintinosprekes');
-Route::post('/isiminti', [App\Http\Controllers\PrekesController::class, 'isimintiPreke'])->name('isiminti');
+Route::post('/isiminti', [App\Http\Controllers\IsimintinuPrekiuController::class, 'isimintiPreke'])->name('isiminti');
 Route::get('/isimintinosprekes/{kategorija}', [App\Http\Controllers\IsimintinuPrekiuController::class, 'filtras'])->name('filtravimas');;
 
 
-Route::view('uzsakymoataskaitos', 'uzsakymoataskaitos')->name('uzsakymoataskaitos');
-//Route::view('uzsakymusarasas', 'uzsakymusarasas')->name('uzsakymusarasas');
+Route::get('uzsakymoataskaitos', [App\Http\Controllers\UzsakymoController::class, 'ataskaita'])->name('uzsakymoataskaitos');
+
 Route::view('nepatuzsakymusarasas', 'nepatuzsakymusarasas')->name('nepatuzsakymusarasas');
 Route::get('/uzsakymusarasas', [App\Http\Controllers\UzsakymoController::class, 'uzsakymas'])->name('uzsakymusarasas');
 Route::post('/TrintiUžsakymą', [App\Http\Controllers\UzsakymoController::class, 'deleteOrder'])->name('deleteOrder');
@@ -64,6 +62,7 @@ Route::view('prekespridejimas', 'prekespridejimas')->name('prekespridejimas');
 Route::get('prekes', [App\Http\Controllers\PrekesController::class, 'prekes'])->name('prekes');
 Route::get('/prekes/{kategorija}', [App\Http\Controllers\PrekesController::class, 'filtruoti'])->name('filtrinti');
 Route::post('prekespridejimas', [App\Http\Controllers\PrekesController::class, 'pridetiPreke'])->name('prekespridejimas');
+Route::get('prekes', [App\Http\Controllers\PrekesController::class, 'prekes'])->name('prekes');
 
 Route::view('preke', 'preke')->name('preke');
 Route::view('prekesredag', 'prekesredag')->name('prekesredag');

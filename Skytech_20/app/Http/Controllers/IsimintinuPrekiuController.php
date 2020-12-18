@@ -27,6 +27,23 @@ class IsimintinuPrekiuController extends Controller
         return view('isimintinosprekes', compact('merged'));
       
     }
+    public function isimintiPreke(Request $request)
+    {
+        if (Isiminimas::where('fk_preke', '=', $request['ID']) -> where('fk_user', '=', auth()->user()->id) -> exists()) 
+        {
+            $request ->session()->flash('success', 'Ši prekė jau buvo įtraukta į sąrašą');
+            return redirect() -> back();
+        }   
+        else
+        {
+            $isiminimas =  new Isiminimas();
+            $isiminimas -> fk_preke = $request['ID'];
+            $isiminimas -> fk_user = auth()->user()->id;
+            $isiminimas -> save();
+            $request ->session()->flash('success', 'Prekė įtraukta į įsimintinų prekių sąrašą');
+            return redirect() -> back();
+        }
+    }
 
     public function filtras($kategorija)
     {
