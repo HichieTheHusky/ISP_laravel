@@ -60,6 +60,9 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="nav-link" href="{{ route('darbuotojopridejimas') }}">{{ __('Darbuotojo pridėjimas') }}</a>
                                 <a class="nav-link" href="{{ route('darbuotojai') }}">{{ __('Darbuotojų  sarašas') }}</a>
+                                @if (auth()->user()->user_type == \App\Models\User::ROLE_WORKER || auth()->user()->user_type == \App\Models\User::ROLE_ADMIN)
+                                    <a class="nav-link" href="{{ route('klientai') }}">{{ __('Klientų sąrašas') }}</a>
+                                @endif
                             </div>
                         </li>
                         @endif
@@ -73,13 +76,13 @@
                             @if (auth()->user()->user_type == \App\Models\User::ROLE_USER)
                                 <a class="nav-link" href="{{ route('uzsakymusarasas') }}">{{ __('Užsakymų istorija') }}</a>
                                 @endif
-                            @if (auth()->user()->user_type == \App\Models\User::ROLE_USER)
+                            @if (auth()->user()->user_type == \App\Models\User::ROLE_USER || auth()->user()->user_type == \App\Models\User::ROLE_ADMIN)
                                 <a class="nav-link" href="{{ route('uzsakymoataskaitos') }}">{{ __('Užsakymų ataskaita') }}</a>
                             @endif
-                                @if (auth()->user()->user_type == \App\Models\User::ROLE_WORKER)
+                                @if (auth()->user()->user_type == \App\Models\User::ROLE_WORKER || auth()->user()->user_type == \App\Models\User::ROLE_ADMIN)
                                 <a class="nav-link" href="{{ route('uzsakymusarasas') }}">{{ __('Darbuotoju Užsakymų sąrašas') }}</a>
                                 @endif
-                             
+
                             </div>
                         </li>
 

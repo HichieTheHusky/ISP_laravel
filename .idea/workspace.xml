@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7701409-fb26-4915-82c0-767d49d45a06" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Skytech_20/app/Http/Controllers/AdministravimoController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Skytech_20/app/Models/Uzsakymas.php" afterDir="false" />
+    <list default="true" id="c7701409-fb26-4915-82c0-767d49d45a06" name="Default Changelist" comment="darbuotojų peržiūra, pridėjimas, redagavimas">
+      <change afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/klientai.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/klientas.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skytech_20/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skytech_20/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skytech_20/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skytech_20/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skytech_20/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skytech_20/app/Http/Controllers/AdministravimoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/app/Http/Controllers/AdministravimoController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/darbuotojai.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/darbuotojai.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/darbuotojopridejimas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/darbuotojopridejimas.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/darbuotojoredag.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/darbuotojoredag.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skytech_20/resources/views/Uzsakymai/nepatuzsakymusarasas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Uzsakymai/nepatuzsakymusarasas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/darbuotojas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/darbuotojas.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Skytech_20/resources/views/Uzsakymai/uzsakymusarasas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Uzsakymai/uzsakymusarasas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skytech_20/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Skytech_20/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -177,8 +172,20 @@
       <workItem from="1604946080888" duration="80000" />
       <workItem from="1607678536764" duration="873000" />
       <workItem from="1607781499446" duration="14325000" />
-      <workItem from="1607861873515" duration="17866000" />
+      <workItem from="1607861873515" duration="18182000" />
+      <workItem from="1607932657996" duration="3349000" />
+      <workItem from="1608022812211" duration="422000" />
+      <workItem from="1608142397657" duration="802000" />
+      <workItem from="1608214898313" duration="15966000" />
     </task>
+    <task id="LOCAL-00001" summary="darbuotojų peržiūra, pridėjimas, redagavimas">
+      <created>1607907441607</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607907441607</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,5 +205,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="darbuotojų peržiūra, pridėjimas, redagavimas" />
+    <option name="LAST_COMMIT_MESSAGE" value="darbuotojų peržiūra, pridėjimas, redagavimas" />
   </component>
 </project>

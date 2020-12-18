@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Uzsakymas;
 use DB;
 
 use Illuminate\Http\Request;
@@ -12,11 +13,33 @@ use Illuminate\Support\Facades\Validator;
 
 class AdministravimoController extends Controller
 {
+    public function klientai(){
+        $users = user::where('user_type', 'user')->get();
+        return view('klientai', ['users'=>$users]);
+    }
 
+    public function klientas($id){
+        $user = user::find($id);
+        $orders = uzsakymas::where('fk_vartotojas', $id)->get();
+        return view('klientas', compact('user','orders'));
+    }
+
+    public function darbuotojas($id){
+        $user = user::find($id);
+        return view('darbuotojas', ['user'=>$user]);
+    }
     public function darbuotojai(){
         $users = user::where('user_type', 'worker')
                         ->get();
         return view('darbuotojai', ['users'=>$users]);
+    }
+
+    public function salintiDarbuotoja(Request $request){
+        $bilietai = \Illuminate\Support\Facades\DB::table('bilietas')->select('*')->where('fk_darbuotojas' , '=', $request['ID'])->get();
+        DB::table('bilietas')->where('fk_darbuotojas', '=',  $request['ID'])->delete();
+        DB::table('users')->where('id', '=',  $request['ID'])->delete();
+        $request ->session()->flash('success', 'Darbuotojas pašalintas sėkmingai');
+        return redirect()->route('darbutojai');
     }
 
     public function redaguoti($id){
@@ -103,5 +126,10 @@ class AdministravimoController extends Controller
         }
         else
             return redirect()->back();
+    }
+
+    public function uzsakymai(){
+        $uzsakymai = Uzsakymas::all();
+        return view('uzsakymusarasas', ['uzsakymai'=>$uzsakymai]);
     }
 }

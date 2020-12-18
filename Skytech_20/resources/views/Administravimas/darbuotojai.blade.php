@@ -38,7 +38,7 @@
                                         <td>{{$user->surname}}</td>
                                         <td>{{$user->email}}</td>
                                         <td>{{$user->created_at}}</td>
-                                        <td><a class="btn btn-primary" href="{{ route('darbuotojoredag', $user->id) }}">{{ __('Redaguoti') }}</a></td>
+                                        <td><a class="btn btn-primary" href="{{route('darbuotojas', $user->id)}}"><butto>{{__('Peržiūrėti')}}</butto></a></td>
                                     </tr>
                                 @endforeach
                                 </tbody>

@@ -28,13 +28,13 @@
                             <div class ="col-md-4">
                             Galinė data
                                 <input type="datetime-local" name="to_date" id="to_date" class="form_control" placceholder="Pradinė data" required/>
-                            </div>  
+                            </div>
                             <div class ="col-md-4">
                             <br>
                             <button type="submit" class="btn btn-primary">Filtruoti</button>
                             <a class="btn btn-primary" href="{{ route('uzsakymusarasas') }}">{{ __('Visi') }}</a>
-                            </div> 
-                            
+                            </div>
+
                         </div>
                         </form>
 
@@ -52,7 +52,7 @@
                                     <th>Pristatymo būdas</th>
                                     <th>Adresas</th>
                                     <th>Būsena</th>
-                                    <th>Veiksmai</th>
+                                    <th colspan="2">Veiksmai</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -65,6 +65,7 @@
                                 <td style="vertical-align: middle">{{ $uzsakymas->kategorija }}</td>
                                 <td style="vertical-align: middle">{{ $uzsakymas->adresas }}</td>
                                 <td style="vertical-align: middle">{{$uzsakymas->statusas }}</td>
+                                <td style="vertical-align: middle"><button class="btn btn-sm btn-primary">Peržiūrėti</button></td>
                                 <td style="vertical-align: middle">
                             @if( ($uzsakymas->statusas == 'Išsiųstas' ) || ($uzsakymas->statusas == 'Pristatytas'))
                                  @else
@@ -74,7 +75,7 @@
                                  </form>
                             @endif
                                 </td>
-                             
+
                                     </tr>
                                     <?php  $i++;?>
                         @endforeach

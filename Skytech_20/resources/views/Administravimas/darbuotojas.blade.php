@@ -14,8 +14,39 @@
                             </div>
                         @endif
 
-                        {{ __('informacija') }}
-                        <a class="btn btn-primary" href="{{ route('darbuotojai') }}">{{ __('Pašalinti') }}</a>
+                            <table id="datatable-buttons" class="table table-sm table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                <tbody style="text-align:center;">
+                                <tr>
+                                    <th>Vardas</th>
+                                    <th>{{ $user['name'] }}</th>
+                                </tr>
+                                <tr>
+                                    <th>Pavardė</th>
+                                    <th>{{ $user['surname'] }}</th>
+                                </tr>
+                                <tr>
+                                    <th>Telefono numeris</th>
+                                    <th>{{ $user['telephone'] }}</th>
+                                </tr>
+                                <tr>
+                                    <th>Email</th>
+                                    <th>{{ $user['email'] }}</th>
+                                </tr>
+                                <tr>
+                                    <th>Adresas</th>
+                                    <th>{{ $user['address'] }}</th>
+                                </tr>
+                                <tr>
+                                    <th>Paskyros sukūrimo data</th>
+                                    <th>{{ $user['created_at'] }}</th>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <a class="btn btn-primary" href="{{ route('darbuotojoredag', $user->id) }}">{{ __('Redaguoti') }}</a>
+                            <form style="display: inline;" method="post" action="{{ route('salintiDarbuotoja', ['ID' => $user->id]) }}" onclick="return confirm('Ar tikrai norite pašalinti?')">
+                                @csrf
+                                <button type="submit" class="btn btn-primary">Šalinti</button>
+                            </form>
                     </div>
                 </div>
             </div>
