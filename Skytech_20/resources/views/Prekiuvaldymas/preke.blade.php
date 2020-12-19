@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Jusu prekes perziura') }}</div>
+                    <div class="card-header">{{ __('Prekės peržiūra') }}</div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -14,7 +14,7 @@
                             </div>
                         @endif
 
-                        {{ __('Prekių duommenys') }}
+                        {{ __('Prekės duomenys') }}
                         <table id="datatable-buttons" class="table table-sm table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                 <tbody style="text-align:center;">
                                 <tr>
@@ -56,7 +56,38 @@
                                 @csrf
                                 <button type="submit" class="btn btn-primary">Šalinti</button>
                             </form>
-                    
+                            <div> {{__('Komentarai: ')}}
+                           <br>
+                            @foreach($komentaras as $k)
+                            @if ($k -> fk_preke == $preke['id'])
+                            <tr>
+                                <div style="border: 1px solid gray">{{ $k -> pavadinimas}}</div>
+                                @if ($k -> fk_user == auth()->user()->id)
+                                <a class="btn btn-primary" href="{{ route('redaguotiKom', $k->id) }}"><butto>{{__('Redaguoti komentarą')}}</butto></a>
+                                @endif
+                                <br>
+                            </tr>
+                            @endif
+                            @endforeach
+                            <form method="POST" action="{{ route('pridetiKomentara', ['ID' => $preke->id]) }}">
+                            <div">
+                                {{ __('Rašyti komentarą: ') }}
+
+                                <div class="height:200px width:150px">
+                                    <input id="pavadinimas" type="text"  name="pavadinimas" class="height:200px; width:150px;">                              
+                                </div>
+                            <br>
+                            </div>
+                            <div class="form-group row mb-0">
+                                <div>
+                                    @csrf
+                                    <button type="submit" class="btn btn-primary">
+                                        {{ __('Komentuoti') }}
+                                    </button>
+                                </div>
+                            </div>
+                            </div>
+                            </form>
                     </div>
                 </div>
             </div>

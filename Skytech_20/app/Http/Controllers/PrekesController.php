@@ -7,6 +7,7 @@ use App\Models\User;
 
 use Illuminate\Http\Request;
 use App\Models\Preke;
+use App\Models\Komentaras;
 use App\Models\Isiminimas;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
@@ -16,7 +17,8 @@ class PrekesController extends Controller
 {
     public function preke($id){
         $preke = Preke::find($id);
-        return view('preke', ['preke'=>$preke]);
+        $komentaras = Komentaras::orderBy('id')->get()->all();
+        return view('preke', ['preke'=>$preke], compact('komentaras'));
     }
     public function prekes()
     {
@@ -28,6 +30,37 @@ class PrekesController extends Controller
         DB::table('prekes')->where('id', '=',  $request['ID'])->delete();
         $request ->session()->flash('success', 'Preke pašalinta sėkmingai');
         return redirect()->route('prekes');
+    }
+    public function redaguotiKom($id){
+        $komentaras = Komentaras::find($id);
+
+        return view('komentarasred', ['komentaras'=>$komentaras]);
+    }
+    public function redaguotiKomentara(Request $request){
+        $id = $request->input('editid');
+        $komentaras = Komentaras::find($id);
+
+        if (Auth::user())
+        {
+            $validate = null;
+                $validate = $request->validate([
+                    'pavadinimas' => 'required|min:2',
+                ]);
+
+            if($validate)
+            {
+                $komentaras->pavadinimas = $request['pavadinimas'];
+                $komentaras->save();
+                $request ->session()->flash('success', 'Duomenis pavyko atnaujinti');
+                return redirect()->back();
+            }
+            else
+                return redirect()->back();
+
+        }
+        else
+            return redirect()->back();
+
     }
     public function redaguoti($id){
         $preke = Preke::find($id);
@@ -89,7 +122,29 @@ class PrekesController extends Controller
             return redirect() -> back();
         }
     }
-    
+    public function pridetiKomentara(Request $request){
+        if (Auth::user())
+        {
+            $validate = null;
+            $validate = $request->validate([
+                'pavadinimas' => 'required|min:2', 
+            ]);
+            if($validate)
+            {
+                Komentaras::create([
+                    'pavadinimas' => $request['pavadinimas'],
+                    'fk_user' => auth()->user()->id,
+                    'fk_preke' => $request['ID'],
+                ]);
+                return redirect()->back();
+            }
+            else
+                return redirect()->back();
+
+        }
+        else
+            return redirect()->back();
+    }
     public function pridetiPreke(Request $request)
     {
         if (Auth::user())

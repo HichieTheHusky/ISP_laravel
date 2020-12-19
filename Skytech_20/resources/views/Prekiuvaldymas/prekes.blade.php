@@ -61,9 +61,7 @@
                                 <td style="vertical-align: middle">
                                 
                                 <a class="btn btn-primary" href="{{ route('preke', $preke->id) }}"><butto>{{__('Peržiūrėti')}}</butto></a>
-                                @if (auth()->user()->user_type == \App\Models\User::ROLE_WORKER)
-                                    <a class="btn btn-link p-0" href="{{ route('prekesredag', ['ID' => $preke->id]) }}">Uždarymas</a>
-                                @endif
+        
 
                                 @if (auth()->user()->user_type == \App\Models\User::ROLE_USER) 
                                     <form style="display: inline;" method="post" action="{{ route('isiminti', ['ID' => $preke->id]) }}" >

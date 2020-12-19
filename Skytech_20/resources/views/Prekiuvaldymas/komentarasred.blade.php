@@ -14,8 +14,29 @@
                             </div>
                         @endif
 
-                        {{ __('informacija') }}
-                        <a class="btn btn-primary" href="{{ route('preke') }}">{{ __('uzpildziau') }}</a>
+                        <form method="POST" action="{{ route('komentaras.redagavimas') }}">
+                            @csrf
+                            <div class="form-group row">
+                                <label for="pavadinimas" class="col-md-4 col-form-label text-md-right">{{ __('Pavadinimas') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="pavadinimas" value="{{$komentaras->pavadinimas}}" type="text" class="form-control @error('pavadinimas') is-invalid @enderror" name="pavadinimas" value="{{ old('pavadinimas') }}" required autocomplete="pavadinimas" autofocus>
+
+                                    @error('pavadinimas')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0">
+                                <div class="col-md-6 offset-md-4">
+                                    <button type="submit" class="btn btn-primary" name="editid" value="{{$komentaras->id}}">
+                                        {{ __('Redaguoti') }}
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

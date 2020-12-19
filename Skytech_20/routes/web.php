@@ -67,7 +67,9 @@ Route::get('prekes', [App\Http\Controllers\PrekesController::class, 'prekes'])->
 Route::get('/prekesredag/{id}', [App\Http\Controllers\PrekesController::class, 'redaguoti'])->name('prekesredag');
 Route::post('/prekesredag', [App\Http\Controllers\PrekesController::class, 'redaguotiPreke'])->name('preke.redagavimas');
 Route::post('salintiPreke', [App\Http\Controllers\PrekesController::class, 'salintiPreke'])->name('salintiPreke');
-
+Route::post('pridetiKomentara', [App\Http\Controllers\PrekesController::class, 'pridetiKomentara'])->name('pridetiKomentara');
+Route::get('/komentarasred/{id}', [App\Http\Controllers\PrekesController::class, 'redaguotiKom'])->name('redaguotiKom');
+Route::post('/komentarasred', [App\Http\Controllers\PrekesController::class, 'redaguotiKomentara'])->name('komentaras.redagavimas');
 //Route::view('preke', 'preke')->name('preke');
 
 //Route::view('prekesredag', 'prekesredag')->name('prekesredag');
