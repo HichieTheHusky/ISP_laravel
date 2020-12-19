@@ -39,7 +39,7 @@ class AdministravimoController extends Controller
         DB::table('bilietas')->where('fk_darbuotojas', '=',  $request['ID'])->delete();
         DB::table('users')->where('id', '=',  $request['ID'])->delete();
         $request ->session()->flash('success', 'Darbuotojas pašalintas sėkmingai');
-        return redirect()->route('darbutojai');
+        return redirect()->route('darbuotojai');
     }
 
     public function redaguoti($id){

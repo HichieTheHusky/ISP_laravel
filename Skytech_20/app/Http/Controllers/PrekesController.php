@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
+use Illuminate\Support\Facades\Validator;
+use App\Models\User;
 
 use Illuminate\Http\Request;
 use App\Models\Preke;
@@ -12,12 +14,64 @@ use Illuminate\Support\Facades\Auth;
 
 class PrekesController extends Controller
 {
+    public function preke($id){
+        $preke = Preke::find($id);
+        return view('preke', ['preke'=>$preke]);
+    }
     public function prekes()
     {
         $prekes = Preke::orderBy('created_at')->get()->all();
         return view('prekes', compact('prekes'));
     }
 
+    public function salintiPreke(Request $request){
+        DB::table('prekes')->where('id', '=',  $request['ID'])->delete();
+        $request ->session()->flash('success', 'Preke pašalinta sėkmingai');
+        return redirect()->route('prekes');
+    }
+    public function redaguoti($id){
+        $preke = Preke::find($id);
+
+        return view('prekesredag', ['preke'=>$preke]);
+    }
+
+    public function redaguotiPreke(Request $request){
+        $id = $request->input('editid');
+        $preke = Preke::find($id);
+       // $kodas = $preke->kodas;
+        if (Auth::user())
+        {
+            $validate = null;
+                $validate = $request->validate([
+                    'kodas' => 'required|min:2',
+                    'pavadinimas' => 'required|min:2',
+                    'gamintojas'=> 'required',
+                    'aprašymas'=> 'required',
+                    'kaina' => 'required',
+                    'kiekis' => 'required',
+                    'kategorija' => 'required'
+                ]);
+
+            if($validate)
+            {
+                $preke->kodas = $request['kodas'];
+                $preke->pavadinimas = $request['pavadinimas'];
+                $preke->gamintojas = $request['gamintojas'];
+                $preke->aprašymas = $request['aprašymas'];
+                $preke->kaina = $request['kaina'];
+                $preke->kiekis = $request['kiekis'];
+                $preke->kategorija = $request['kategorija'];
+                $preke->save();
+                $request ->session()->flash('success', 'Duomenis pavyko atnaujinti');
+                return redirect()->back();
+            }
+            else
+                return redirect()->back();
+
+        }
+        else
+            return redirect()->back();
+    }
     public function isimintiPreke(Request $request)
     {
         if (Isiminimas::where('fk_preke', '=', $request['ID']) -> where('fk_user', '=', auth()->user()->id) -> exists()) 

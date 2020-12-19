@@ -60,7 +60,7 @@
                                 <td style="vertical-align: middle">{{ $preke->kiekis }}</td>
                                 <td style="vertical-align: middle">
                                 
-                                <a class="btn btn-link p-0" href="{{ route('preke', ['ID' => $preke->id]) }}">Prekės peržiūra</a> |
+                                <a class="btn btn-primary" href="{{ route('preke', $preke->id) }}"><butto>{{__('Peržiūrėti')}}</butto></a>
                                 @if (auth()->user()->user_type == \App\Models\User::ROLE_WORKER)
                                     <a class="btn btn-link p-0" href="{{ route('prekesredag', ['ID' => $preke->id]) }}">Uždarymas</a>
                                 @endif
