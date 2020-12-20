@@ -185,7 +185,7 @@ class PagalbosController extends Controller
         $bilietas = Bilietas::find($ID);
         $ID_pris = $bilietas->fk_darbuotojas;
 
-        $users = User::where('user_type',User::ROLE_WORKER)->get()->all();
+        $users = User::where('user_type',User::ROLE_WORKER)->where('is_banned', false)->get()->all();
         $count = 0;
         foreach ($users as $user)
         {

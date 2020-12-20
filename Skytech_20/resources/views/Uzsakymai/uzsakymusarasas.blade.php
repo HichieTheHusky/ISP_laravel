@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-10">
                 <div class="card">
                     <div class="card-header">{{ __('Užsakymai') }}</div>
 
@@ -39,9 +39,9 @@
                         </form>
 
 
-                        @if (auth()->user()->user_type == \App\Models\User::ROLE_WORKER)
+                        @if (auth()->user()->user_type == \App\Models\User::ROLE_WORKER || auth()->user()->user_type == \App\Models\User::ROLE_ADMIN)
                         <a class="btn btn-primary" href="{{ route('nepatuzsakymusarasas') }}">{{ __('Nepatvirtinti užsakymai') }}</a>
-                        <a class="btn btn-primary" href="{{ route('uzsakymas') }}">{{ __('Ataskaita') }}</a>
+                        <a class="btn btn-primary" >{{ __('Ataskaita') }}</a>
                         @endif
                             <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap mt-4" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                 <thead>
@@ -65,7 +65,7 @@
                                 <td style="vertical-align: middle">{{ $uzsakymas->kategorija }}</td>
                                 <td style="vertical-align: middle">{{ $uzsakymas->adresas }}</td>
                                 <td style="vertical-align: middle">{{$uzsakymas->statusas }}</td>
-                                <td style="vertical-align: middle"><button class="btn btn-sm btn-primary">Peržiūrėti</button></td>
+                                <td style="vertical-align: middle"><a href="{{route('uzsakymas', $uzsakymas->id)}}"><button class="btn btn-sm btn-primary">Peržiūrėti</button></a></td>
                                 <td style="vertical-align: middle">
                             @if( ($uzsakymas->statusas == 'Išsiųstas' ) || ($uzsakymas->statusas == 'Pristatytas'))
                                  @else

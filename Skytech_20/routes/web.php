@@ -53,10 +53,12 @@ Route::get('/isimintinosprekes/{kategorija}', [App\Http\Controllers\IsimintinuPr
 
 Route::get('uzsakymoataskaitos', [App\Http\Controllers\UzsakymoController::class, 'ataskaita'])->name('uzsakymoataskaitos');
 
-Route::view('nepatuzsakymusarasas', 'nepatuzsakymusarasas')->name('nepatuzsakymusarasas');
+Route::get('nepatuzsakymusarasas', [App\Http\Controllers\AdministravimoController::class, 'nepatvirtintiUzsakymai'])->name('nepatuzsakymusarasas');
 Route::get('/uzsakymusarasas', [App\Http\Controllers\UzsakymoController::class, 'uzsakymas'])->name('uzsakymusarasas');
 Route::post('/TrintiUžsakymą', [App\Http\Controllers\UzsakymoController::class, 'deleteOrder'])->name('deleteOrder');
 Route::post('/uzsakymusarasas', [App\Http\Controllers\UzsakymoController::class, 'filtruoti'])->name('uzsakymuFiltravimas');
+Route::get('uzsakymas/{id}', [App\Http\Controllers\UzsakymoController::class, 'uzsakymoInformacija'])->name('uzsakymas');
+Route::post('uzsakymas', [App\Http\Controllers\AdministravimoController::class, 'patvirtintiUzsakyma'])->name('patvirtintiUzsakyma');
 
 Route::view('prekespridejimas', 'prekespridejimas')->name('prekespridejimas');
 Route::get('preke/{id}', [App\Http\Controllers\PrekesController::class, 'preke'])->name('preke');

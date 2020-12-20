@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bilietas;
 use App\Models\User;
 use App\Models\Uzsakymas;
 use DB;
@@ -29,15 +30,33 @@ class AdministravimoController extends Controller
         return view('darbuotojas', ['user'=>$user]);
     }
     public function darbuotojai(){
-        $users = user::where('user_type', 'worker')
+        $users = user::where('user_type', 'worker')->where('is_banned', false)
                         ->get();
         return view('darbuotojai', ['users'=>$users]);
     }
 
     public function salintiDarbuotoja(Request $request){
-        $bilietai = \Illuminate\Support\Facades\DB::table('bilietas')->select('*')->where('fk_darbuotojas' , '=', $request['ID'])->get();
-        DB::table('bilietas')->where('fk_darbuotojas', '=',  $request['ID'])->delete();
-        DB::table('users')->where('id', '=',  $request['ID'])->delete();
+        $bilietai = Bilietas::where('fk_darbuotojas', $request['ID'])->get();
+        $uzsakymai = Uzsakymas::where('fk_darbuotojas', $request['ID'])->where('statusas', 'Nepatvirtintas')->get();
+        $user = User::where('id', $request['ID'])->first();
+
+        $user->is_banned = true;
+        $user->save();
+
+        $users = User::where('user_type', 'worker')->where('is_banned', false)->get();
+        $maxrand = count($users) - 1;
+        $number = rand(0,$maxrand);
+
+        foreach ($bilietai as $bilietas){
+            $bilietas->fk_darbuotojas = $users[$number]['id'];
+            $bilietas->save();
+        }
+
+        foreach ($uzsakymai as $uzsakymas){
+            $uzsakymas->fk_darbuotojas = $users[$number]['id'];
+            $uzsakymas->save();
+        }
+
         $request ->session()->flash('success', 'Darbuotojas pašalintas sėkmingai');
         return redirect()->route('darbuotojai');
     }
@@ -131,5 +150,19 @@ class AdministravimoController extends Controller
     public function uzsakymai(){
         $uzsakymai = Uzsakymas::all();
         return view('uzsakymusarasas', ['uzsakymai'=>$uzsakymai]);
+    }
+
+    public function patvirtintiUzsakyma(Request $request){
+        $uzsakymai = Uzsakymas::all();
+        $uzsakymas = Uzsakymas::find($request['confirmOrder']);
+        $uzsakymas->statusas = 'Patvirtintas';
+        $uzsakymas->save();
+        $request->session()->flash('success', 'Užsakymas sėkmingai patvirtintas');
+        return redirect()->back();
+    }
+
+    public function nepatvirtintiUzsakymai(){
+        $uzsakymai = Uzsakymas::where('statusas', 'Nepatvirtintas')->get();
+        return View('nepatuzsakymusarasas', ['uzsakymai'=>$uzsakymai]);
     }
 }

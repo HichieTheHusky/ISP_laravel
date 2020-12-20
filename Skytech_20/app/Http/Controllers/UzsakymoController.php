@@ -20,8 +20,14 @@ class UzsakymoController extends Controller
         return view('uzsakymusarasas', compact('uzsakymai'));
     }
 
+    public function uzsakymoInformacija($id){
+        $uzsakymas = Uzsakymas::find($id);
+        $prekes = DB::table('prekes_uzsakymas')->select('*')->where('fk_uzsakymas' , '=' , $id)->get();
+        return view('uzsakymas', compact('uzsakymas', 'prekes'));
+    }
+
     public function deleteOrder(Request $request)
-    {  
+    {
       //  dd($order);
       $prekes_uzsakymas = DB::table('prekes_uzsakymas')->select('*')->where('fk_uzsakymas' , '=', $request['ID'])->get();
         foreach ($prekes_uzsakymas as $prekes_uz)
@@ -38,7 +44,7 @@ class UzsakymoController extends Controller
     public function filtruoti(Request $request)
     {
         $input1 = $request->input('from_date');
-        $input2 = $request->input('to_date');    
+        $input2 = $request->input('to_date');
 
         $user = User::find(Auth::user()->id);
         $uzsakymai = Uzsakymas::where('fk_vartotojas', $user->id)->whereBetween('created_at', [$input1, $input2])->get()->all();
