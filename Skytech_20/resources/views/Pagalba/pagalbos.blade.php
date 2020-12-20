@@ -24,8 +24,9 @@
                                     <th>Pavadinimas</th>
                                     <th>Kategorija</th>
                                     <th>Sukurta</th>
-                                        @if (auth()->user()->user_type != \App\Models\User::ROLE_USER)
-                                            <th>Būsena</th>
+                                    <th>Būsena</th>
+
+                                    @if (auth()->user()->user_type != \App\Models\User::ROLE_USER)
                                             <th>uzdarymo data</th>
                                             <th>Darbuotojo Komentaras</th>
                                             <th>Ivertinimo data</th>
@@ -46,14 +47,15 @@
                                         <td style="vertical-align: middle">{{ $biliet->pavadinimas }}</td>
                                         <td style="vertical-align: middle">{{ $biliet->kategorija }}</td>
                                         <td style="vertical-align: middle">{{ $biliet->created_at }}</td>
-                                            @if (auth()->user()->user_type != \App\Models\User::ROLE_USER)
                                             <td style="vertical-align: middle">
                                                 @if ($biliet->aktyvumas == 1)
-                                                Aktyvus
+                                                    Aktyvus
                                                 @else
-                                                Uždarytas
+                                                    Uždarytas
                                                 @endif
                                             </td>
+                                            @if (auth()->user()->user_type != \App\Models\User::ROLE_USER)
+
                                             <td style="vertical-align: middle">{{ $biliet->uzdarymas }}</td>
                                             <td style="vertical-align: middle">{{ $biliet->darbuotojo_komentaras }}</td>
                                             <td style="vertical-align: middle">{{ $biliet->vertinimo_data }}</td>
@@ -63,8 +65,8 @@
                                             <td style="vertical-align: middle">{{ $biliet->greicio_ivertis }}</td>
                                             @endif
                                         <td style="vertical-align: middle">
-                                            @if ($biliet->aktyvumas == 1)
-                                                <a class="btn btn-link p-0" href="{{ route('bilietas', ['ID' => $biliet->id]) }}">Perziureti</a> |
+                                                <a class="btn btn-link p-0" href="{{ route('bilietas', ['ID' => $biliet->id]) }}">Perziureti</a>
+                                        @if ($biliet->aktyvumas == 1) |
                                                 @if (auth()->user()->user_type == \App\Models\User::ROLE_WORKER)
                                                 <a class="btn btn-link p-0" href="{{ route('uzdaryti', ['ID' => $biliet->id]) }}">Uždarymas</a>
                                                 @endif
@@ -72,7 +74,7 @@
                                                 <a class="btn btn-link p-0" href="{{ route('paskirsti', ['ID' => $biliet->id]) }}">priskirimas</a>
                                                 @endif
                                             @endif
-                                            @if (auth()->user()->user_type == \App\Models\User::ROLE_USER)
+                                            @if (auth()->user()->user_type == \App\Models\User::ROLE_USER && (is_null($biliet->vertinimo_data)) )
                                                 <a class="btn btn-link p-0" href="{{ route('vertinti', ['ID' => $biliet->id]) }}">Vertinti</a>
                                             @endif
                                         </td>

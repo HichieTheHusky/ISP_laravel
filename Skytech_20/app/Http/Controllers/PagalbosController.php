@@ -15,6 +15,22 @@ class PagalbosController extends Controller
     //
     public function makeBilietas(Request $request)
     {
+        $request->validate([
+            'pavadinimas' => ['required', 'string', 'max:255'],
+            'kategorija' => ['required', 'string', 'max:255'],
+            'tekstas' => ['required', 'string', 'max:255'],
+        ],
+            [
+                'pavadinimas.required' => 'pavadinimas turi būti įvestas',
+                'pavadinimas.max' => 'pavadinimas turi būti iki 255 simbolių',
+                'kategorija.required' => 'kategorija turi būti įvestas',
+                'kategorija.max' => 'kategorija turi būti iki 255 simbolių',
+                'tekstas.required' => 'tekstas turi būti įvestas',
+                'tekstas.max' => 'tekstas turi būti iki 255 simbolių',
+
+            ]);
+
+
         $users = User::where('user_type',User::ROLE_WORKER)->get()->all();
         $maxrand = count($users) - 1;
         $number = rand(0,$maxrand);
@@ -64,6 +80,14 @@ class PagalbosController extends Controller
 
     public function makeZinutes(Request $request)
     {
+        $request->validate([
+            'tekstas' => ['required', 'string', 'max:255'],
+        ],
+            [
+                'tekstas.required' => 'Komentaras turi būti įvestas',
+                'tekstas.max' => 'Komentaras turi būti iki 255 simbolių',
+
+            ]);
 
         $zinute = new Zinutes();
         $zinute->fk_rasytojas = auth()->user()->id;
@@ -99,6 +123,26 @@ class PagalbosController extends Controller
 
     public function makeIvertis(Request $request)
     {
+        $request->validate([
+            'komentaras' => ['required', 'string', 'max:255'],
+            'pagalba' => ['required', 'numeric', 'min:1', 'max:5'],
+            'bendravimas' => ['required', 'numeric', 'min:1', 'max:5'],
+            'greitis' => ['required', 'numeric', 'min:1', 'max:5'],
+        ],
+            [
+                'komentaras.required' => 'Komentaras turi būti įvestas',
+                'komentaras.max' => 'Komentaras turi būti iki 255 simbolių',
+                'pagalba.required' => 'pagalba turi būti įvestas',
+                'pagalba.max' => 'pagalba turi būti iš 3 simboliu',
+                'pagalba.min' => 'pagalba turi būti iš 3 simboliu',
+                'bendravimas.required' => 'bendravimas turi būti įvestas',
+                'bendravimas.max' => 'bendravimas turi būti iš 3 simboliu',
+                'bendravimas.min' => 'bendravimas turi būti iš 3 simboliu',
+                'greitis.required' => 'greitis turi būti įvestas',
+                'greitis.max' => 'greitis turi būti iš 3 simboliu',
+                'greitis.min' => 'greitis turi būti iš 3 simboliu',
+
+            ]);
         $bilietas = Bilietas::find($request['id']);
         $bilietas->vertinimo_data = Carbon::now();
         $bilietas->vartotojo_komentaras = $request['komentaras'];
@@ -118,6 +162,14 @@ class PagalbosController extends Controller
 
     public function makeUzdarymas(Request $request)
     {
+        $request->validate([
+            'komentaras' => ['required', 'string', 'max:255'],
+        ],
+            [
+                'komentaras.required' => 'Komentaras turi būti įvestas',
+                'komentaras.max' => 'Komentaras turi būti iki 255 simbolių',
+
+            ]);
         $bilietas = Bilietas::find($request['id']);
         $bilietas->uzdarymas = Carbon::now();
         $bilietas->aktyvumas = 0;

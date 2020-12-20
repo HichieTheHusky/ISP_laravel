@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7701409-fb26-4915-82c0-767d49d45a06" name="Default Changelist" comment="darbuotojų peržiūra, pridėjimas, redagavimas">
-      <change afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/klientai.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/klientas.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skytech_20/app/Http/Controllers/AdministravimoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/app/Http/Controllers/AdministravimoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/darbuotojai.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/darbuotojai.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/darbuotojas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Administravimas/darbuotojas.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skytech_20/resources/views/Uzsakymai/uzsakymusarasas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Uzsakymai/uzsakymusarasas.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skytech_20/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skytech_20/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skytech_20/app/Http/Controllers/PagalbosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/app/Http/Controllers/PagalbosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skytech_20/resources/views/Pagalba/bilietas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Pagalba/bilietas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skytech_20/resources/views/Pagalba/bilietoforma.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Pagalba/bilietoforma.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skytech_20/resources/views/Pagalba/pagalbos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Pagalba/pagalbos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skytech_20/resources/views/Pagalba/vertinti.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Skytech_20/resources/views/Pagalba/vertinti.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,6 +174,7 @@
       <workItem from="1608022812211" duration="422000" />
       <workItem from="1608142397657" duration="802000" />
       <workItem from="1608214898313" duration="15966000" />
+      <workItem from="1608453615798" duration="1572000" />
     </task>
     <task id="LOCAL-00001" summary="darbuotojų peržiūra, pridėjimas, redagavimas">
       <created>1607907441607</created>
