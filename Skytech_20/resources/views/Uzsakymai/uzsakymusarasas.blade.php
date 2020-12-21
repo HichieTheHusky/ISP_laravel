@@ -56,16 +56,20 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                <?php  $i=1;?>
                         @foreach($uzsakymai as $uzsakymas)
                             <tr>
-                            <?php  $i=1;?>
-                                <td style="vertical-align: middle"><?php echo $i;?></td>
+                                <td style="vertical-align: middle"><?php echo $i; $i++;?></td>
                                 <td style="vertical-align: middle">{{ $uzsakymas->created_at }}</td>
                                 <td style="vertical-align: middle">{{ $uzsakymas->kaina }}€</td>
                                 <td style="vertical-align: middle">{{ $uzsakymas->kategorija }}</td>
                                 <td style="vertical-align: middle">{{ $uzsakymas->adresas }}</td>
                                 <td style="vertical-align: middle">{{$uzsakymas->statusas }}</td>
-                                <td style="vertical-align: middle"><a href="{{route('uzsakymas', $uzsakymas->id)}}"><button class="btn btn-sm btn-primary">Peržiūrėti</button></a></td>
+                                @if (auth()->user()->user_type == \App\Models\User::ROLE_WORKER)
+                                <td style="vertical-align: middle">
+                                <a href="{{route('uzsakymas', $uzsakymas->id)}}"><button class="btn btn-sm btn-primary">Peržiūrėti</button></a>
+                                </td>
+                                @endif
                                 <td style="vertical-align: middle">
                             @if( ($uzsakymas->statusas == 'Išsiųstas' ) || ($uzsakymas->statusas == 'Pristatytas'))
                                  @else
@@ -77,7 +81,7 @@
                                 </td>
 
                                     </tr>
-                                    <?php  $i++;?>
+                               
                         @endforeach
                     </tbody>
                             </table>
