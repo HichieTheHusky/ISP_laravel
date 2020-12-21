@@ -41,7 +41,7 @@
                                             <td style="vertical-align: middle">{{ $preke-> Pavadinimas }}</td>
                                             <td style="vertical-align: middle">{{ $preke-> Gamintojas }}</td>
                                             <td style="vertical-align: middle">{{ $preke-> Aprašymas }}</td>
-                                            <td style="vertical-align: middle">{{ $preke-> Kaina }}</td>
+                                            <td style="vertical-align: middle">{{ $preke-> Kaina }}€</td>
                                         </tr>
                                  @endforeach
                                 </tbody>
