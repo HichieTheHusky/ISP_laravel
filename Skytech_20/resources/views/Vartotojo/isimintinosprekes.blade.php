@@ -32,6 +32,7 @@
                                     <th>Gamintojas</th>
                                     <th>Aprašymas</th>
                                     <th>Kaina</th>
+                                    <th>Kategorija</th>
                                 </tr>
                             </thead>
                                 <tbody>
@@ -42,6 +43,7 @@
                                             <td style="vertical-align: middle">{{ $preke-> Gamintojas }}</td>
                                             <td style="vertical-align: middle">{{ $preke-> Aprašymas }}</td>
                                             <td style="vertical-align: middle">{{ $preke-> Kaina }}€</td>
+                                            <td style="vertical-align: middle">{{ $preke-> Kategorija }}</td>
                                         </tr>
                                  @endforeach
                                 </tbody>

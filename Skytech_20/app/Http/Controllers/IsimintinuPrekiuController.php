@@ -21,7 +21,7 @@ class IsimintinuPrekiuController extends Controller
 
        foreach ($isimintinos_prekes as $preke)
        {
-           $result = DB::table('prekes')->select('Kodas', 'Pavadinimas', 'Gamintojas', 'Aprašymas', 'Kaina')->where('id', '=', $preke -> fk_preke  )->get();
+           $result = DB::table('prekes')->select('Kodas', 'Pavadinimas', 'Gamintojas', 'Aprašymas', 'Kaina', 'Kategorija')->where('id', '=', $preke -> fk_preke  )->get();
            $merged = $result->merge($merged);
        }
         return view('isimintinosprekes', compact('merged'));
@@ -55,9 +55,9 @@ class IsimintinuPrekiuController extends Controller
         foreach ($isimintinos_prekes as $preke)
         {
             if($kategorija != null)
-                $result = DB::table('prekes')->select('Kodas', 'Pavadinimas', 'Gamintojas', 'Aprašymas', 'Kaina')->where('id', '=', $preke -> fk_preke)->where('kategorija', '=', $kategorija)->get();
+                $result = DB::table('prekes')->select('Kodas', 'Pavadinimas', 'Gamintojas', 'Aprašymas', 'Kaina', 'Kategorija')->where('id', '=', $preke -> fk_preke)->where('kategorija', '=', $kategorija)->get();
             else
-                $result = DB::table('prekes')->select('Kodas', 'Pavadinimas', 'Gamintojas', 'Aprašymas', 'Kaina')->where('id', '=', $preke -> fk_preke)->get();
+                $result = DB::table('prekes')->select('Kodas', 'Pavadinimas', 'Gamintojas', 'Aprašymas', 'Kaina', 'Kategorija')->where('id', '=', $preke -> fk_preke)->get();
             $merged = $result -> merge($merged);
         }
 
