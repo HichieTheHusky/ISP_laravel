@@ -13,8 +13,8 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-                    Daugiausiai išleista užsakymo metu:  {{$min}}€   <br>
-                    Mažiausiai išleista užsakymo metu:  {{$max}}€   <br>
+                    Daugiausiai išleista užsakymo metu:  {{$max}}€   <br>
+                    Mažiausiai išleista užsakymo metu:  {{$min}}€   <br>
                     Vidutiniškai išleista užsakymo metu:  {{$average}}€ <br>
                     Bendra suma:                        {{$sum}}€    <br>
                        
