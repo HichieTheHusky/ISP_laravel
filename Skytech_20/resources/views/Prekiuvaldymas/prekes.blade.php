@@ -12,7 +12,7 @@
     <a href="{{ route('filtrinti', 'korpusas') }}">Korpusas</a> |
     <a href="{{ route('filtrinti', '') }}">Visi</a> 
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">{{ __('Parduotuves prekes') }}</div>
 
